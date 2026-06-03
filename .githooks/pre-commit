@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+# SIM Pedals Blue Pill — pre-commit hook
+# Instalar: git config core.hooksPath .githooks
+set -euo pipefail
+
+echo ""
+echo "╔══════════════════════════════════════════╗"
+echo "║  SIM Pedals Blue Pill · Pre-commit       ║"
+echo "╚══════════════════════════════════════════╝"
+
+STAGED=$(git diff --cached --name-only 2>/dev/null || true)
+
+# ── [1/4] Arquivos sensíveis ─────────────────────────────────────────
+echo "🔍 [1/4] Verificando arquivos sensíveis..."
+if echo "$STAGED" | grep -qE '(^|/)config\.h$|\.env$|\.key$|\.pem$|\.json$'; then
+  # .json pode ser perfil do usuário — avisa mas não bloqueia
+  if echo "$STAGED" | grep -qE '(^|/)config\.h$|\.env$|\.key$|\.pem$'; then
+    echo "❌ Arquivo sensível no stage! Abortando."
+    echo "   Arquivos: $(echo "$STAGED" | grep -E '(^|/)config\.h$|\.env$|\.key$|\.pem$')"
+    exit 1
+  else
+    echo "⚠️  Arquivos .json detectados — certifique-se de não commitar calibrações pessoais."
+  fi
+fi
+echo "✅ Nenhum arquivo sensível crítico."
+
+# ── [2/4] FW_VERSION no firmware ─────────────────────────────────────
+echo "🔍 [2/4] Verificando FW_VERSION..."
+FW=$(grep -E '#define[[:space:]]+FW_VERSION' src/sim_pedals/sim_pedals.ino 2>/dev/null \
+     | sed 's/.*"\([^"]*\)".*/\1/' || echo "")
+if [ -z "$FW" ]; then
+  echo "❌ FW_VERSION não encontrado em src/sim_pedals/sim_pedals.ino"
+  exit 1
+fi
+if ! echo "$FW" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$'; then
+  echo "❌ FW_VERSION='$FW' não é SemVer (X.Y.Z)"
+  exit 1
+fi
+echo "✅ FW_VERSION=$FW"
+
+# ── [3/4] Lint workflows ─────────────────────────────────────────────
+echo "🔍 [3/4] Lint GitHub Actions workflows..."
+WF_CHANGED=$(echo "$STAGED" | grep -E '^\.github/workflows/.*\.ya?ml$' || true)
+if [ -n "$WF_CHANGED" ]; then
+  if command -v actionlint &>/dev/null; then
+    actionlint .github/workflows/*.yml || { echo "❌ Workflow inválido."; exit 1; }
+    echo "✅ Workflows OK."
+  else
+    echo "⚠️  actionlint não encontrado — pulando lint"
+  fi
+else
+  echo "ℹ️  Nenhum workflow alterado — skip."
+fi
+
+# ── [4/4] CHANGELOG version sync ─────────────────────────────────────
+echo "🔍 [4/4] Verificando sincronização CHANGELOG ↔ FW_VERSION..."
+if [ -n "$FW" ] && [ -f "CHANGELOG.md" ]; then
+  if grep -q "\[${FW}\]" CHANGELOG.md; then
+    echo "✅ CHANGELOG contém entrada para v${FW}"
+  else
+    echo "⚠️  CHANGELOG não tem entrada para [${FW}] — lembre de atualizar antes do release."
+  fi
+fi
+
+echo ""
+echo "✅ Todos os checks passaram!"
+echo ""

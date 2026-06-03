@@ -1,0 +1,29 @@
+build/
+*.bin
+*.elf
+*.hex
+.vscode/
+.pio/
+include/config.h
+src/sim_pedals/config.h
+src/sim_pedals/build
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+
+# Windows Explorer
+Thumbs.db
+desktop.ini
+* - Copy*
+include/*.txt
+
+# macOS
+.DS_Store
+
+# Perfis salvos pelo usuário (não versionar calibrações pessoais)
+*.json
+!gui/examples/*.json

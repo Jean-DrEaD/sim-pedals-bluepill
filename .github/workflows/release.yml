@@ -1,0 +1,105 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
+
+jobs:
+  release:
+    name: Build & Publish Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install arduino-cli
+        env:
+          ARDUINO_CLI_VERSION: "1.1.1"
+        run: |
+          set -euo pipefail
+          curl -fsSL "https://github.com/arduino/arduino-cli/releases/download/v${ARDUINO_CLI_VERSION}/arduino-cli_${ARDUINO_CLI_VERSION}_Linux_64bit.tar.gz" | tar -xz -C /usr/local/bin arduino-cli
+          arduino-cli version
+
+      - name: Install ARM Toolchain
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y gcc-arm-none-eabi
+          GCC_BIN="$(command -v arm-none-eabi-g++)"
+          TOOLCHAIN_ROOT="$(dirname "$(dirname "$GCC_BIN")")"
+          echo "TOOLCHAIN_ROOT=$TOOLCHAIN_ROOT" >> "$GITHUB_ENV"
+          arm-none-eabi-g++ --version | head -n1
+
+      - name: Initialize arduino-cli config
+        run: |
+          set -euo pipefail
+          arduino-cli config init
+
+      - name: Install Roger Clark STM32 core (git clone)
+        run: |
+          set -euo pipefail
+          CORE_DIR="$HOME/Arduino/hardware/Arduino_STM32"
+          mkdir -p "$HOME/Arduino/hardware"
+          if [ ! -d "$CORE_DIR/.git" ]; then
+            git clone --depth 1 https://github.com/rogerclarkmelbourne/Arduino_STM32 "$CORE_DIR"
+          fi
+
+      - name: Install libraries
+        working-directory: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          LIB_DIR="$HOME/Arduino/libraries"
+          mkdir -p "$LIB_DIR"
+
+          LIB_FILE="ci/libraries.txt"
+          if [ ! -f "$LIB_FILE" ]; then
+            echo "::error::Arquivo $LIB_FILE não encontrado."
+            ls -la ci/ || true
+            exit 1
+          fi
+
+          while IFS=',' read -r name url || [[ -n "$name" ]]; do
+            name="$(echo "$name" | tr -d '[:space:]')"
+            url="$(echo "$url" | tr -d '[:space:]')"
+            [[ "$name" =~ ^#.*$ || -z "$name" ]] && continue
+            echo "📦 Clonando: $name"
+            rm -rf "$LIB_DIR/$name"
+            git clone --depth 1 "$url" "$LIB_DIR/$name"
+          done < "$LIB_FILE"
+
+      - name: Build Firmware
+        run: |
+          set -euo pipefail
+          arduino-cli compile \
+            --fqbn Arduino_STM32:STM32F1:genericSTM32F103C \
+            --build-property "runtime.tools.arm-none-eabi-gcc.path=${TOOLCHAIN_ROOT}" \
+            --library "$HOME/Arduino/libraries/USBComposite" \
+            --build-path "${{ github.workspace }}/build" \
+            "${{ github.workspace }}/src/sim_pedals"
+          echo "Artefatos gerados:"
+          ls -la build/
+
+      - name: Extract release notes
+        run: |
+          set -euo pipefail
+          TAG="${{ github.ref_name }}"
+          VERSION="${TAG#v}"
+          if [ -f CHANGELOG.md ]; then
+            awk -v ver="$VERSION" '/^## \['"$VERSION"'\]/ {flag=1; next} flag && /^## \[/ {exit} flag {print}' CHANGELOG.md > RELEASE_NOTES.md
+          fi
+          if [ ! -s RELEASE_NOTES.md ]; then
+            echo "Release ${TAG}" > RELEASE_NOTES.md
+          fi
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "SIM Pedals Blue Pill ${{ github.ref_name }}"
+          body_path: RELEASE_NOTES.md
+          files: |
+            build/*.bin
+            build/*.hex

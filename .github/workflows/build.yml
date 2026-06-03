@@ -1,0 +1,106 @@
+name: Build Firmware
+
+on:
+  push:
+    branches: [main, develop, "fix/*", "feat/*"]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    name: arduino-cli · STM32F103 Blue Pill
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install arduino-cli
+        env:
+          ARDUINO_CLI_VERSION: "1.1.1"
+        run: |
+          set -euo pipefail
+          curl -fsSL "https://github.com/arduino/arduino-cli/releases/download/v${ARDUINO_CLI_VERSION}/arduino-cli_${ARDUINO_CLI_VERSION}_Linux_64bit.tar.gz" | tar -xz -C /usr/local/bin arduino-cli
+          arduino-cli version
+
+      - name: Install ARM Toolchain
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y gcc-arm-none-eabi
+          # Localiza o diretório do toolchain (espera-se /usr/bin/arm-none-eabi-g++)
+          GCC_BIN="$(command -v arm-none-eabi-g++)"
+          echo "g++ encontrado em: $GCC_BIN"
+          # O 'path' deve ser o diretório PAI do 'bin' (ex.: /usr)
+          TOOLCHAIN_ROOT="$(dirname "$(dirname "$GCC_BIN")")"
+          echo "Toolchain root: $TOOLCHAIN_ROOT"
+          echo "TOOLCHAIN_ROOT=$TOOLCHAIN_ROOT" >> "$GITHUB_ENV"
+          arm-none-eabi-g++ --version | head -n1
+
+      - name: Initialize arduino-cli config
+        run: |
+          set -euo pipefail
+          arduino-cli config init
+
+      - name: Cache Roger Clark core
+        uses: actions/cache@v4
+        with:
+          path: ~/Arduino/hardware/Arduino_STM32
+          key: ${{ runner.os }}-rogerclark-core
+          restore-keys: |
+            ${{ runner.os }}-rogerclark-
+
+      - name: Install Roger Clark STM32 core (git clone)
+        run: |
+          set -euo pipefail
+          CORE_DIR="$HOME/Arduino/hardware/Arduino_STM32"
+          mkdir -p "$HOME/Arduino/hardware"
+          if [ ! -d "$CORE_DIR/.git" ]; then
+            git clone --depth 1 https://github.com/rogerclarkmelbourne/Arduino_STM32 "$CORE_DIR"
+          else
+            echo "Core já em cache, pulando clone."
+          fi
+
+      - name: Install libraries
+        working-directory: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          LIB_DIR="$HOME/Arduino/libraries"
+          mkdir -p "$LIB_DIR"
+
+          LIB_FILE="ci/libraries.txt"
+          if [ ! -f "$LIB_FILE" ]; then
+            echo "::error::Arquivo $LIB_FILE não encontrado."
+            ls -la ci/ || true
+            exit 1
+          fi
+
+          while IFS=',' read -r name url || [[ -n "$name" ]]; do
+            name="$(echo "$name" | tr -d '[:space:]')"
+            url="$(echo "$url" | tr -d '[:space:]')"
+            [[ "$name" =~ ^#.*$ || -z "$name" ]] && continue
+            echo "📦 Clonando: $name"
+            rm -rf "$LIB_DIR/$name"
+            git clone --depth 1 "$url" "$LIB_DIR/$name"
+          done < "$LIB_FILE"
+
+      - name: Compile firmware
+        run: |
+          set -euo pipefail
+          arduino-cli compile \
+            --fqbn Arduino_STM32:STM32F1:genericSTM32F103C \
+            --build-property "runtime.tools.arm-none-eabi-gcc.path=${TOOLCHAIN_ROOT}" \
+            --library "$HOME/Arduino/libraries/USBComposite" \
+            --build-path "${{ github.workspace }}/build" \
+            "${{ github.workspace }}/src/sim_pedals"
+          echo "Artefatos gerados:"
+          ls -la build/
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware-build
+          path: |
+            build/*.bin
+            build/*.hex
+          if-no-files-found: warn

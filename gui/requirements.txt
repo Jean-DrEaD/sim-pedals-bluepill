@@ -1,0 +1,4 @@
+# SIM Pedals (DrEaD) - GUI oficial v3.2
+# Dependencia unica: comunicacao serial com a STM32.
+# Tkinter ja vem embutido no Python (nao precisa instalar).
+pyserial>=3.5

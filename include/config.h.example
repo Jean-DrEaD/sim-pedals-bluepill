@@ -1,0 +1,23 @@
+// =====================================================================
+//  SIM Pedals — config.h (customizações opcionais)
+//  Copie este arquivo para config.h e ajuste conforme necessário.
+//  ATENÇÃO: config.h está no .gitignore — nunca será commitado.
+// =====================================================================
+#pragma once
+
+// ── Pinos (descomente para sobrescrever os padrões do firmware) ──────
+// #define PIN_ACEL   PA6   // Acelerador ADC
+// #define PIN_EMBR   PA7   // Embreagem  ADC
+// #define HX711_DT   PB4   // HX711 Data
+// #define HX711_SCK  PB3   // HX711 Clock
+// #define PIN_BTN    PB5   // Botão HID (INPUT_PULLUP)
+
+// ── USB Identity ─────────────────────────────────────────────────────
+// #define USB_VID           0x1EAF
+// #define USB_PID           0x0024
+// #define USB_MANUFACTURER  "DrEaD SimGear"
+// #define USB_PRODUCT_NAME  "SIM Pedals"
+
+// ── Parâmetros de build ───────────────────────────────────────────────
+// #define HID_MAX  1023    // Escala HID (não altere sem ajustar a GUI)
+// #define LUT_N    32      // Tamanho da LUT (deve coincidir com GUI)

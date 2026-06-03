@@ -1,0 +1,1538 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 840"
+   font-family="Segoe UI, Arial, sans-serif"
+   version="1.1"
+   id="svg110"
+   sodipodi:docname="wiring.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview110"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="true"
+     inkscape:zoom="0.7045814"
+     inkscape:cx="991.36878"
+     inkscape:cy="426.49437"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg110">
+    <inkscape:grid
+       id="grid110"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs6">
+    <linearGradient
+       id="swatch120"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#6e6e6e;stop-opacity:0.05405406;"
+         offset="0"
+         id="stop120" />
+    </linearGradient>
+    <linearGradient
+       id="swatch116"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0.0965251;"
+         offset="0"
+         id="stop116" />
+    </linearGradient>
+    <linearGradient
+       id="bg2"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="1003.992"
+       gradientTransform="matrix(1.1952286,0,0,0.83666003,4,0)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         style="stop-color:#0d1117"
+         id="stop1" />
+      <stop
+         offset="100%"
+         style="stop-color:#11151b"
+         id="stop2" />
+    </linearGradient>
+    <marker
+       id="ar"
+       markerWidth="8"
+       markerHeight="8"
+       refX="6"
+       refY="3"
+       orient="auto">
+      <path
+         d="M0,0 L0,6 L8,3 z"
+         fill="#586069"
+         id="path2" />
+    </marker>
+    <marker
+       id="ar-red"
+       markerWidth="8"
+       markerHeight="6"
+       refX="6"
+       refY="3"
+       orient="auto"
+       viewBox="0 0 8 6"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M0,0 L0,6 L8,3 z"
+         fill="#ff5f5f"
+         id="path3" />
+    </marker>
+    <marker
+       id="ar-blue"
+       markerWidth="8"
+       markerHeight="6"
+       refX="6"
+       refY="3"
+       orient="auto"
+       viewBox="0 0 8 6"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M0,0 L0,6 L8,3 z"
+         fill="#3fa7ff"
+         id="path4" />
+    </marker>
+    <marker
+       id="ar-yel"
+       markerWidth="8"
+       markerHeight="6"
+       refX="6"
+       refY="3"
+       orient="auto"
+       viewBox="0 0 8 6"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M0,0 L0,6 L8,3 z"
+         fill="#ffd166"
+         id="path5" />
+    </marker>
+    <marker
+       id="ar-pur"
+       markerWidth="8"
+       markerHeight="8"
+       refX="6"
+       refY="3"
+       orient="auto">
+      <path
+         d="M0,0 L0,6 L8,3 z"
+         fill="#c792ea"
+         id="path6" />
+    </marker>
+    <filter
+       id="sh"
+       x="-0.0035714286"
+       y="-0.0075"
+       width="1.0071429"
+       height="1.015">
+      <feDropShadow
+         dx="0"
+         dy="2"
+         stdDeviation="4"
+         flood-color="#000"
+         flood-opacity="0.5" />
+    </filter>
+    <pattern
+       id="dot"
+       width="20"
+       height="20"
+       patternUnits="userSpaceOnUse">
+      <circle
+         cx="10"
+         cy="10"
+         r="0.8"
+         fill="#21262d"
+         opacity="0.5"
+         id="circle6" />
+    </pattern>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch116"
+       id="linearGradient14"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.2255553,0,0,1.2255553,-184.8713,-152.92164)"
+       x1="580.71814"
+       y1="674.4502"
+       x2="679.82947"
+       y2="674.4502" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch120"
+       id="linearGradient16"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0930175,0,0,1.0930175,-95.153396,-74.958053)"
+       x1="492.7207"
+       y1="694.75464"
+       x2="747.54639"
+       y2="694.75464" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch120"
+       id="linearGradient18"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0930175,0,0,1.0930175,-95.153396,-74.958053)"
+       x1="492.7207"
+       y1="710.87329"
+       x2="726.28564"
+       y2="710.87329" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch120"
+       id="linearGradient20"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0930175,0,0,1.0930175,-95.153396,-74.958053)"
+       x1="492.7207"
+       y1="727.66211"
+       x2="770.89014"
+       y2="727.66211" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch120"
+       id="linearGradient22"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0930175,0,0,1.0930175,-95.153396,-74.958053)"
+       x1="492.7207"
+       y1="743.70386"
+       x2="727.43262"
+       y2="743.70386" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch120"
+       id="linearGradient24"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0930175,0,0,1.0930175,-95.153396,-74.958053)"
+       x1="492.7207"
+       y1="759.66211"
+       x2="739.91748"
+       y2="759.66211" />
+  </defs>
+  <path
+     id="rect6"
+     style="fill:url(#bg2)"
+     d="m 2,0 c 0,280.66667 0,561.33333 0,842 401.33333,0 802.66667,0 1204,0 0,-281.33333 0,-562.66667 0,-844 -401.33333,0 -802.66667,0 -1204,0 0,0.6666667 0,1.33333333 0,2 z" />
+  <!-- Title -->
+  <text
+     x="600"
+     y="36"
+     font-size="22"
+     font-weight="bold"
+     fill="#fff"
+     text-anchor="middle"
+     letter-spacing="1"
+     id="text7">WIRING DIAGRAM — SIM Pedals Blue Pill v1.0.0</text>
+  <text
+     x="600"
+     y="58"
+     font-size="11"
+     fill="#8b949e"
+     text-anchor="middle"
+     id="text8">Sensores Hall 49E (Acelerador/Embreagem) · Load Cell + HX711 (Freio) · Botão HID</text>
+  <line
+     x1="40"
+     y1="68"
+     x2="1160"
+     y2="68"
+     stroke="#21262d"
+     stroke-width="1"
+     id="line8" />
+  <!-- ===== BLUE PILL (center) ===== -->
+  <rect
+     x="470"
+     y="92"
+     width="240"
+     height="560"
+     rx="8"
+     fill="#1a2332"
+     stroke="#58a6ff"
+     stroke-width="1.5"
+     filter="url(#sh)"
+     id="rect8" />
+  <rect
+     x="555"
+     y="84"
+     width="70"
+     height="14"
+     rx="3"
+     fill="#21262d"
+     stroke="#30363d"
+     stroke-width="1"
+     id="rect9" />
+  <text
+     x="590"
+     y="96"
+     font-size="9px"
+     fill="#3fb950"
+     text-anchor="middle"
+     id="text9">USB Tipo-C</text>
+  <text
+     x="590"
+     y="126"
+     font-size="13"
+     fill="#58a6ff"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text10">STM32F103C8T6</text>
+  <text
+     x="590"
+     y="140"
+     font-size="10"
+     fill="#586069"
+     text-anchor="middle"
+     id="text11"
+     style="fill:#999999">Blue Pill</text>
+  <!-- Left pins -->
+  <text
+     x="492"
+     y="172"
+     font-size="8px"
+     fill="#586069"
+     text-anchor="middle"
+     id="text12"
+     style="fill:#999999">GND</text>
+  <circle
+     cx="474"
+     cy="169"
+     r="4"
+     fill="#21262d"
+     stroke="#586069"
+     stroke-width="1"
+     id="circle12" />
+  <text
+     x="492"
+     y="212"
+     font-size="8px"
+     fill="#ff5f5f"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text13">PA6</text>
+  <circle
+     cx="470"
+     cy="209"
+     r="5"
+     fill="#ff5f5f"
+     stroke="#ff8080"
+     stroke-width="1.5"
+     id="circle13" />
+  <text
+     x="592"
+     y="212"
+     font-size="9"
+     fill="#e6edf3"
+     text-anchor="middle"
+     id="text14">Acelerador (Hall OUT)</text>
+  <text
+     x="492"
+     y="252"
+     font-size="8px"
+     fill="#3fa7ff"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text15">PA7</text>
+  <circle
+     cx="474"
+     cy="249"
+     r="5"
+     fill="#3fa7ff"
+     stroke="#6bbfff"
+     stroke-width="1.5"
+     id="circle15" />
+  <text
+     x="592"
+     y="252"
+     font-size="9"
+     fill="#e6edf3"
+     text-anchor="middle"
+     id="text16">Embreagem (Hall OUT)</text>
+  <text
+     x="492"
+     y="292"
+     font-size="8px"
+     fill="#ffd166"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text17">PB3</text>
+  <circle
+     cx="474"
+     cy="289"
+     r="5"
+     fill="#ffd166"
+     stroke="#ffe599"
+     stroke-width="1.5"
+     id="circle17" />
+  <text
+     x="590"
+     y="292"
+     font-size="9"
+     fill="#e6edf3"
+     text-anchor="middle"
+     id="text18">HX711 SCK</text>
+  <text
+     x="492"
+     y="332"
+     font-size="8px"
+     fill="#ffd166"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text19"
+     style="fill:#ffa10e;fill-opacity:1">PB4</text>
+  <circle
+     cx="474"
+     cy="329"
+     r="5"
+     fill="#ffd166"
+     stroke="#ffe599"
+     stroke-width="1.5"
+     id="circle19"
+     style="fill:#ffa10e;fill-opacity:1" />
+  <text
+     x="590"
+     y="332"
+     font-size="9"
+     fill="#e6edf3"
+     text-anchor="middle"
+     id="text20">HX711 DT</text>
+  <text
+     x="492"
+     y="372"
+     font-size="8px"
+     fill="#c792ea"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text21">PB5</text>
+  <circle
+     cx="474"
+     cy="369"
+     r="5"
+     fill="#c792ea"
+     stroke="#ddb8f8"
+     stroke-width="1.5"
+     id="circle21" />
+  <text
+     x="590"
+     y="372"
+     font-size="9"
+     fill="#e6edf3"
+     text-anchor="middle"
+     id="text22">Botão HID</text>
+  <text
+     x="492"
+     y="412"
+     font-size="8px"
+     fill="#ff6666"
+     text-anchor="middle"
+     id="text23">5V</text>
+  <circle
+     cx="474"
+     cy="409"
+     r="4"
+     fill="#21262d"
+     stroke="#ff4444"
+     stroke-width="1.2"
+     id="circle23" />
+  <text
+     x="592"
+     y="412"
+     font-size="9"
+     fill="#888"
+     text-anchor="middle"
+     id="text24">→ HX711 VCC</text>
+  <text
+     x="492"
+     y="452"
+     font-size="8px"
+     fill="#ff9944"
+     text-anchor="middle"
+     id="text25">3.3V</text>
+  <circle
+     cx="474"
+     cy="449"
+     r="4"
+     fill="#21262d"
+     stroke="#ff8800"
+     stroke-width="1.2"
+     id="circle25" />
+  <text
+     x="592"
+     y="452"
+     font-size="9"
+     fill="#888"
+     text-anchor="middle"
+     id="text26">→ Hall VCC</text>
+  <text
+     x="492"
+     y="492"
+     font-size="8px"
+     fill="#586069"
+     text-anchor="middle"
+     id="text27"
+     style="fill:#999999">GND</text>
+  <circle
+     cx="474"
+     cy="489"
+     r="4"
+     fill="#21262d"
+     stroke="#586069"
+     stroke-width="1"
+     id="circle27" />
+  <text
+     x="592"
+     y="492"
+     font-size="9"
+     fill="#888"
+     text-anchor="middle"
+     id="text28">GND comum</text>
+  <!-- Right pins (unused) -->
+  <g
+     fill="#161b22"
+     stroke="#30363d"
+     stroke-width="1"
+     id="g36"
+     transform="translate(-4)">
+    <circle
+       cx="710"
+       cy="169"
+       r="3"
+       id="circle28" />
+    <circle
+       cx="710"
+       cy="209"
+       r="3"
+       id="circle29" />
+    <circle
+       cx="710"
+       cy="249"
+       r="3"
+       id="circle30" />
+    <circle
+       cx="710"
+       cy="289"
+       r="3"
+       id="circle31" />
+    <circle
+       cx="710"
+       cy="329"
+       r="3"
+       id="circle32" />
+    <circle
+       cx="710"
+       cy="369"
+       r="3"
+       id="circle33" />
+    <circle
+       cx="710"
+       cy="409"
+       r="3"
+       id="circle34" />
+    <circle
+       cx="710"
+       cy="449"
+       r="3"
+       id="circle35" />
+    <circle
+       cx="710"
+       cy="489"
+       r="3"
+       id="circle36" />
+  </g>
+  <g
+     font-size="8px"
+     fill="#30363d"
+     text-anchor="middle"
+     id="g44"
+     transform="translate(-8)"
+     style="fill:#999999">
+    <text
+       x="698"
+       y="172"
+       id="text36"
+       style="fill:#999999">GND</text>
+    <text
+       x="698"
+       y="212"
+       id="text37"
+       style="fill:#999999">PB11</text>
+    <text
+       x="698"
+       y="252"
+       id="text38"
+       style="fill:#999999">PB10</text>
+    <text
+       x="698"
+       y="292"
+       id="text39"
+       style="fill:#999999">PB1</text>
+    <text
+       x="698"
+       y="332"
+       id="text40"
+       style="fill:#999999">PB0</text>
+    <text
+       x="698"
+       y="372"
+       id="text41"
+       style="fill:#999999">PA5</text>
+    <text
+       x="698"
+       y="412"
+       id="text42"
+       style="fill:#999999">PA4</text>
+    <text
+       x="698"
+       y="452"
+       id="text43"
+       style="fill:#999999">PA3</text>
+    <text
+       x="698"
+       y="492"
+       id="text44"
+       style="fill:#999999">PA2</text>
+  </g>
+  <!-- Boot note -->
+  <rect
+     x="488"
+     y="560"
+     width="204"
+     height="60"
+     rx="4"
+     fill="#1a1200"
+     stroke="#e6a800"
+     stroke-width="1"
+     id="rect44" />
+  <text
+     x="590"
+     y="578"
+     font-size="9"
+     fill="#ffd166"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text45">⚠ Para gravar firmware</text>
+  <text
+     x="590"
+     y="594"
+     font-size="8"
+     fill="#e6a800"
+     text-anchor="middle"
+     id="text46">BOOT0 = HIGH (1) antes de ligar USB</text>
+  <text
+     x="590"
+     y="608"
+     font-size="8"
+     fill="#e6a800"
+     text-anchor="middle"
+     id="text47">Após gravar: BOOT0 = LOW (0) + reset</text>
+  <!-- ===== HALL ACELERADOR ===== -->
+  <rect
+     x="50"
+     y="92"
+     width="210"
+     height="165"
+     rx="8"
+     fill="#1a2a1a"
+     stroke="#ff5f5f"
+     stroke-width="1.5"
+     filter="url(#sh)"
+     id="rect47" />
+  <text
+     x="155"
+     y="116"
+     font-size="12"
+     fill="#ff5f5f"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text48">Sensor Hall 49E</text>
+  <text
+     x="155"
+     y="132"
+     font-size="10"
+     fill="#ff8080"
+     text-anchor="middle"
+     id="text49">Acelerador · saída linear</text>
+  <rect
+     x="125"
+     y="144"
+     width="60"
+     height="26"
+     rx="3"
+     fill="#161b22"
+     stroke="#ff5f5f"
+     stroke-width="1.5"
+     id="rect49" />
+  <text
+     x="155"
+     y="161"
+     font-size="9"
+     fill="#ff8080"
+     text-anchor="middle"
+     id="text50">49E</text>
+  <line
+     x1="138"
+     y1="170"
+     x2="138"
+     y2="182"
+     stroke="#ff8800"
+     stroke-width="1.5"
+     id="line50" />
+  <line
+     x1="155"
+     y1="170"
+     x2="155"
+     y2="182"
+     stroke="#ff5f5f"
+     stroke-width="2"
+     id="line51" />
+  <line
+     x1="172"
+     y1="170"
+     x2="172"
+     y2="182"
+     stroke="#586069"
+     stroke-width="1.5"
+     id="line52" />
+  <circle
+     cx="88"
+     cy="202"
+     r="5"
+     fill="#21262d"
+     stroke="#ff8800"
+     stroke-width="1.5"
+     id="circle52" />
+  <text
+     x="88"
+     y="192"
+     font-size="9px"
+     fill="#ff9944"
+     text-anchor="middle"
+     id="text52">VCC 3.3V</text>
+  <circle
+     cx="155"
+     cy="202"
+     r="6"
+     fill="#ff5f5f"
+     stroke="#ff8080"
+     stroke-width="1.5"
+     id="circle53" />
+  <text
+     x="155"
+     y="192"
+     font-size="9px"
+     fill="#ff5f5f"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text53">OUT→PA6</text>
+  <circle
+     cx="222"
+     cy="202"
+     r="5"
+     fill="#21262d"
+     stroke="#586069"
+     stroke-width="1.5"
+     id="circle54" />
+  <text
+     x="222"
+     y="192"
+     font-size="9px"
+     fill="#586069"
+     text-anchor="middle"
+     id="text54">GND</text>
+  <text
+     x="155.58281"
+     y="248.92169"
+     font-size="8px"
+     fill="#586069"
+     text-anchor="middle"
+     id="text55">ADC ~410 (repouso) .. 3685 (fundo)</text>
+  <path
+     d="m 155,208 0,26.95341 H 420 V 209 h 50"
+     fill="none"
+     stroke="#ff5f5f"
+     stroke-width="2"
+     marker-end="url(#ar-red)"
+     id="path55"
+     sodipodi:nodetypes="ccccc" />
+  <!-- ===== HALL EMBREAGEM ===== -->
+  <rect
+     x="50"
+     y="297"
+     width="210"
+     height="165"
+     rx="8"
+     fill="#1a1e2a"
+     stroke="#3fa7ff"
+     stroke-width="1.5"
+     filter="url(#sh)"
+     id="rect57" />
+  <text
+     x="155"
+     y="313"
+     font-size="12px"
+     fill="#3fa7ff"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text57">Sensor Hall 49E</text>
+  <text
+     x="155"
+     y="329"
+     font-size="10px"
+     fill="#6bbfff"
+     text-anchor="middle"
+     id="text58">Embreagem · saída linear</text>
+  <rect
+     x="125"
+     y="341"
+     width="60"
+     height="26"
+     rx="3"
+     fill="#161b22"
+     stroke="#3fa7ff"
+     stroke-width="1.5"
+     id="rect58" />
+  <text
+     x="155"
+     y="358"
+     font-size="9px"
+     fill="#6bbfff"
+     text-anchor="middle"
+     id="text59">49E</text>
+  <line
+     x1="138"
+     y1="367"
+     x2="138"
+     y2="379"
+     stroke="#ff8800"
+     stroke-width="1.5"
+     id="line59" />
+  <line
+     x1="155"
+     y1="367"
+     x2="155"
+     y2="379"
+     stroke="#3fa7ff"
+     stroke-width="2"
+     id="line60" />
+  <line
+     x1="172"
+     y1="367"
+     x2="172"
+     y2="379"
+     stroke="#586069"
+     stroke-width="1.5"
+     id="line61" />
+  <circle
+     cx="88"
+     cy="387"
+     r="5"
+     fill="#21262d"
+     stroke="#ff8800"
+     stroke-width="1.5"
+     id="circle61" />
+  <text
+     x="88"
+     y="403"
+     font-size="9px"
+     fill="#ff9944"
+     text-anchor="middle"
+     id="text61">VCC 3.3V</text>
+  <circle
+     cx="155"
+     cy="387"
+     r="6"
+     fill="#3fa7ff"
+     stroke="#6bbfff"
+     stroke-width="1.5"
+     id="circle62" />
+  <text
+     x="155"
+     y="403"
+     font-size="9px"
+     fill="#3fa7ff"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text62">OUT→PA7</text>
+  <circle
+     cx="222"
+     cy="387"
+     r="5"
+     fill="#21262d"
+     stroke="#586069"
+     stroke-width="1.5"
+     id="circle63" />
+  <text
+     x="222"
+     y="403"
+     font-size="9px"
+     fill="#586069"
+     text-anchor="middle"
+     id="text63">GND</text>
+  <text
+     x="155.228"
+     y="457.08746"
+     font-size="8px"
+     fill="#586069"
+     text-anchor="middle"
+     id="text64">ADC ~410 (repouso) .. 3685 (fundo)</text>
+  <path
+     d="M 155,407.98208 C 155,405.34767 155,434 155,434 H 440 V 249 h 30"
+     fill="none"
+     stroke="#3fa7ff"
+     stroke-width="2"
+     marker-end="url(#ar-blue)"
+     id="path64"
+     sodipodi:nodetypes="ccccc" />
+  <!-- ===== HX711 ===== -->
+  <rect
+     x="50"
+     y="502"
+     width="210"
+     height="240"
+     rx="8"
+     fill="#2a1a1a"
+     stroke="#ffd166"
+     stroke-width="1.5"
+     filter="url(#sh)"
+     id="rect64" />
+  <text
+     x="155"
+     y="514"
+     font-size="12px"
+     fill="#ffd166"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text65">Módulo HX711</text>
+  <text
+     x="155"
+     y="530"
+     font-size="10px"
+     fill="#c8a000"
+     text-anchor="middle"
+     id="text66">Amplificador Load Cell</text>
+  <path
+     d="M 88,208 V 448.51569 H 432 L 470,449"
+     fill="none"
+     stroke="#ff8800"
+     stroke-width="1.5"
+     stroke-dasharray="5, 3"
+     opacity="0.55"
+     id="path56"
+     sodipodi:nodetypes="cccc" />
+  <circle
+     cx="75"
+     cy="566"
+     r="5"
+     fill="#21262d"
+     stroke="#ff4444"
+     stroke-width="1.5"
+     id="circle66" />
+  <text
+     x="75"
+     y="546"
+     font-size="8px"
+     fill="#ff6666"
+     text-anchor="middle"
+     id="text67">VCC</text>
+  <text
+     x="75"
+     y="556"
+     font-size="7px"
+     fill="#586069"
+     text-anchor="middle"
+     id="text68">5V</text>
+  <circle
+     cx="115"
+     cy="566"
+     r="5"
+     fill="#21262d"
+     stroke="#586069"
+     stroke-width="1"
+     id="circle68" />
+  <text
+     x="115"
+     y="546"
+     font-size="8px"
+     fill="#586069"
+     text-anchor="middle"
+     id="text69">GND</text>
+  <circle
+     cx="185"
+     cy="566"
+     r="5"
+     fill="#ffd166"
+     stroke="#ffe599"
+     stroke-width="1.5"
+     id="circle69"
+     style="stroke:#ffce82;stroke-opacity:1;fill:#ffa10e;fill-opacity:1" />
+  <text
+     x="185"
+     y="546"
+     font-size="8px"
+     fill="#ffd166"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text70"
+     style="fill:#ffa10e;fill-opacity:1">DT</text>
+  <text
+     x="185"
+     y="556"
+     font-size="7px"
+     fill="#586069"
+     text-anchor="middle"
+     id="text71">→PB4</text>
+  <circle
+     cx="235"
+     cy="566"
+     r="5"
+     fill="#ffd166"
+     stroke="#ffe599"
+     stroke-width="1.5"
+     id="circle71" />
+  <text
+     x="235"
+     y="546"
+     font-size="8px"
+     fill="#ffd166"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text72">SCK</text>
+  <text
+     x="235"
+     y="556"
+     font-size="7px"
+     fill="#586069"
+     text-anchor="middle"
+     id="text73">→PB3</text>
+  <text
+     x="155"
+     y="612"
+     font-size="11px"
+     fill="#c8a000"
+     text-anchor="middle"
+     id="text74">Célula de Carga (100 kg)</text>
+  <rect
+     x="62"
+     y="626"
+     width="176"
+     height="58"
+     rx="4"
+     fill="#1a1000"
+     stroke="#c8a000"
+     stroke-width="1"
+     id="rect74" />
+  <rect
+     x="84"
+     y="636"
+     width="8"
+     height="8"
+     fill="#e74c3c"
+     rx="1"
+     id="rect75" />
+  <text
+     x="96"
+     y="644"
+     font-size="8px"
+     fill="#e74c3c"
+     id="text75">Vermelho → E+</text>
+  <rect
+     x="84"
+     y="650"
+     width="8"
+     height="8"
+     fill="#2c2c2c"
+     rx="1"
+     stroke="#586069"
+     stroke-width="0.5"
+     id="rect76" />
+  <text
+     x="96"
+     y="658"
+     font-size="8px"
+     fill="#888888"
+     id="text76">Preto → E−</text>
+  <rect
+     x="161"
+     y="636"
+     width="8"
+     height="8"
+     fill="#3fb950"
+     rx="1"
+     id="rect77" />
+  <text
+     x="173"
+     y="644"
+     font-size="8px"
+     fill="#3fb950"
+     id="text77">Verde → A+</text>
+  <rect
+     x="161"
+     y="650"
+     width="8"
+     height="8"
+     fill="#f0f0f0"
+     rx="1"
+     id="rect78" />
+  <text
+     x="173"
+     y="658"
+     font-size="8px"
+     fill="#cccccc"
+     id="text78">Branco → A−</text>
+  <text
+     x="155"
+     y="674"
+     font-size="7px"
+     fill="#586069"
+     text-anchor="middle"
+     id="text79">(Amarelo/Shield → GND, se houver)</text>
+  <text
+     x="155"
+     y="702"
+     font-size="8px"
+     fill="#3fb950"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text80">✓ 10 Hz (fábrica) funciona bem</text>
+  <text
+     x="155"
+     y="715"
+     font-size="8px"
+     fill="#586069"
+     text-anchor="middle"
+     id="text81">80 Hz é OPCIONAL (RATE→VCC)</text>
+  <text
+     x="155"
+     y="728"
+     font-size="8px"
+     fill="#586069"
+     text-anchor="middle"
+     id="text82">Filtro EMA do firmware compensa</text>
+  <path
+     d="m 75,571 v 15 H 42 V 423.70908 H 432 V 409 H 460.20233 470"
+     fill="none"
+     stroke="#ff4444"
+     stroke-width="2"
+     marker-end="url(#ar)"
+     id="path82"
+     sodipodi:nodetypes="cccccccc"
+     inkscape:highlight-color="#ff4444"
+     style="marker-end:url(#ar-red)" />
+  <path
+     d="m 115.00438,571.6534 0,13.9642 -24.322018,0.21625 0.95285,-97.79502 232.429138,0.66891 -0.43456,-285.57817 -98.50317,-0.17596 m 98.68118,285.533 144.61551,0.41801"
+     fill="none"
+     stroke="#586069"
+     stroke-width="1.51235"
+     stroke-dasharray="5, 3"
+     opacity="0.55"
+     id="path83"
+     sodipodi:nodetypes="ccccccccc" />
+  <path
+     d="m 227.29706,387.02103 97.58514,-0.39808"
+     fill="none"
+     stroke="#586069"
+     stroke-width="1.48421"
+     stroke-dasharray="5, 3"
+     opacity="0.55"
+     id="path83-8"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="m 185,571 v 22.99265 l 209.30824,0 L 393.681,329.00751 444,329 h 26"
+     fill="none"
+     stroke="#ffd166"
+     stroke-width="2"
+     marker-end="url(#ar-yel)"
+     id="path84"
+     sodipodi:nodetypes="cccccc"
+     style="stroke:#ffa10e;stroke-opacity:1;marker-end:url(#ar-yel)" />
+  <path
+     d="m 235,571 v 15.42665 l 140.26882,0.35482 0,-297.70047 L 448,289 h 22"
+     fill="none"
+     stroke="#ffd166"
+     stroke-width="2"
+     marker-end="url(#ar-yel)"
+     id="path85"
+     sodipodi:nodetypes="cccccc" />
+  <!-- ===== BOTÃO HID ===== -->
+  <rect
+     x="880"
+     y="92"
+     width="220"
+     height="140"
+     rx="8"
+     fill="#1e1a2a"
+     stroke="#c792ea"
+     stroke-width="1.5"
+     filter="url(#sh)"
+     id="rect85" />
+  <text
+     x="990"
+     y="112"
+     font-size="12px"
+     fill="#c792ea"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text85">Botão HID (opcional)</text>
+  <text
+     x="990"
+     y="128"
+     font-size="10px"
+     fill="#a066d0"
+     text-anchor="middle"
+     id="text86">Switch momentâneo (NO)</text>
+  <circle
+     cx="990"
+     cy="160"
+     r="16"
+     fill="none"
+     stroke="#c792ea"
+     stroke-width="2"
+     id="circle86" />
+  <line
+     x1="972"
+     y1="160"
+     x2="982"
+     y2="160"
+     stroke="#c792ea"
+     stroke-width="2"
+     id="line86" />
+  <line
+     x1="998"
+     y1="160"
+     x2="1008"
+     y2="160"
+     stroke="#c792ea"
+     stroke-width="2"
+     id="line87" />
+  <line
+     x1="983"
+     y1="156"
+     x2="997"
+     y2="156"
+     stroke="#c792ea"
+     stroke-width="2.5"
+     id="line88" />
+  <circle
+     cx="932"
+     cy="197"
+     r="5"
+     fill="#c792ea"
+     stroke="#ddb8f8"
+     stroke-width="1.5"
+     id="circle88" />
+  <text
+     x="946"
+     y="213"
+     font-size="9px"
+     fill="#c792ea"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text88">PB5</text>
+  <circle
+     cx="1048"
+     cy="197"
+     r="5"
+     fill="#21262d"
+     stroke="#586069"
+     stroke-width="1.5"
+     id="circle89" />
+  <text
+     x="1064"
+     y="213"
+     font-size="9px"
+     fill="#586069"
+     text-anchor="middle"
+     id="text89">GND</text>
+  <text
+     x="990"
+     y="186"
+     font-size="8px"
+     fill="#586069"
+     text-anchor="middle"
+     id="text90">INPUT_PULLUP — sem resistor externo</text>
+  <path
+     d="m 932,201 v 41 H 760 v 149.07885 l -220.61257,0.19854 0.0308,-22.12439 -33.3232,0.14095"
+     fill="none"
+     stroke="#c792ea"
+     stroke-width="2"
+     marker-end="url(#ar-pur)"
+     id="path90"
+     sodipodi:nodetypes="ccccccc" />
+  <path
+     d="m 1048,201 v 61 l -253.79222,-0.58789 -0.0609,248.0084 -319.77234,0.0355 -0.24731,-16.88263"
+     fill="none"
+     stroke="#586069"
+     stroke-width="1.5"
+     stroke-dasharray="5, 3"
+     opacity="0.5"
+     id="path91"
+     sodipodi:nodetypes="cccccc" />
+  <!-- ===== PC ===== -->
+  <rect
+     x="880"
+     y="277"
+     width="220"
+     height="100"
+     rx="8"
+     fill="#0d2233"
+     stroke="#58a6ff"
+     stroke-width="1.5"
+     filter="url(#sh)"
+     id="rect91" />
+  <text
+     x="990"
+     y="301"
+     font-size="12"
+     fill="#58a6ff"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text91">PC / Computador</text>
+  <text
+     x="990"
+     y="319"
+     font-size="10"
+     fill="#3a7acc"
+     text-anchor="middle"
+     id="text92">USB HID Joystick</text>
+  <text
+     x="990"
+     y="335"
+     font-size="9"
+     fill="#586069"
+     text-anchor="middle"
+     id="text93"
+     style="fill:#999999">VID 0x1EAF · PID 0x0024</text>
+  <text
+     x="990"
+     y="351"
+     font-size="9"
+     fill="#3fb950"
+     text-anchor="middle"
+     id="text94">✓ Plug-and-play · Win / Linux / Mac</text>
+  <text
+     x="990"
+     y="366"
+     font-size="8"
+     fill="#586069"
+     text-anchor="middle"
+     id="text95"
+     style="fill:#999999">X=Acel · Y=Embr · Xrotate=Freio · Btn1</text>
+  <!-- ===== LEGEND ===== -->
+  <rect
+     x="880"
+     y="422"
+     width="220"
+     height="200"
+     rx="8"
+     fill="#161b22"
+     stroke="#21262d"
+     stroke-width="1"
+     id="rect95" />
+  <text
+     x="990"
+     y="444"
+     font-size="11"
+     fill="#e6edf3"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text96">Legenda</text>
+  <line
+     x1="896"
+     y1="462"
+     x2="940"
+     y2="462"
+     stroke="#ff5f5f"
+     stroke-width="2"
+     id="line96" />
+  <text
+     x="950"
+     y="466"
+     font-size="9"
+     fill="#ff5f5f"
+     id="text97">Acelerador (PA6)</text>
+  <line
+     x1="896"
+     y1="484"
+     x2="940"
+     y2="484"
+     stroke="#3fa7ff"
+     stroke-width="2"
+     id="line97" />
+  <text
+     x="950"
+     y="488"
+     font-size="9"
+     fill="#3fa7ff"
+     id="text98">Embreagem (PA7)</text>
+  <line
+     x1="896"
+     y1="506"
+     x2="940"
+     y2="506"
+     stroke="#ffd166"
+     stroke-width="2"
+     id="line98" />
+  <text
+     x="950"
+     y="510"
+     font-size="9"
+     fill="#ffd166"
+     id="text99">HX711 (PB4/PB3)</text>
+  <line
+     x1="896"
+     y1="528"
+     x2="940"
+     y2="528"
+     stroke="#c792ea"
+     stroke-width="2"
+     id="line99" />
+  <text
+     x="950"
+     y="532"
+     font-size="9"
+     fill="#c792ea"
+     id="text100">Botão HID (PB5)</text>
+  <line
+     x1="896"
+     y1="550"
+     x2="940"
+     y2="550"
+     stroke="#ff4444"
+     stroke-width="2"
+     id="line100" />
+  <text
+     x="950"
+     y="554"
+     font-size="9"
+     fill="#ff4444"
+     id="text101">5V (HX711 VCC)</text>
+  <line
+     x1="896"
+     y1="572"
+     x2="940"
+     y2="572"
+     stroke="#ff8800"
+     stroke-width="1.5"
+     id="line101"
+     style="stroke-dasharray:5,3;stroke-dashoffset:0" />
+  <text
+     x="950"
+     y="576"
+     font-size="9"
+     fill="#ff9944"
+     id="text102">3.3V (Hall VCC)</text>
+  <line
+     x1="896"
+     y1="594"
+     x2="940"
+     y2="594"
+     stroke="#586069"
+     stroke-width="1.5"
+     stroke-dasharray="5,3"
+     id="line102" />
+  <text
+     x="950"
+     y="598"
+     font-size="9"
+     fill="#586069"
+     id="text103"
+     style="fill:#999999">GND (comum)</text>
+  <!-- ===== NOTES ===== -->
+  <rect
+     x="427.9519"
+     y="661.9519"
+     width="318.3399"
+     height="118.09616"
+     rx="4.8975368"
+     fill="#1a1500"
+     stroke="#e6a800"
+     stroke-width="0.903837"
+     id="rect103"
+     style="fill:#ad8d00;fill-opacity:1" />
+  <text
+     x="587.68982"
+     y="676.76617"
+     font-size="12.2556px"
+     fill="#ffd166"
+     text-anchor="middle"
+     font-weight="bold"
+     id="text104"
+     style="fill:#ff0000;stroke:url(#linearGradient14);stroke-width:1.22556">⚠ Notas importantes</text>
+  <text
+     x="442.61121"
+     y="687.96814"
+     font-size="9.83716px"
+     fill="#c8a000"
+     id="text105"
+     style="fill:#1a1a1a;fill-opacity:1;stroke:url(#linearGradient16);stroke-width:1.09302"
+     transform="scale(0.98720981,1.0129559)">• Hall 49E: alimente com 3.3V — NÃO 5V (ADC STM32 máx 3.6V)</text>
+  <text
+     x="442.61121"
+     y="705.45642"
+     font-size="9.83716px"
+     fill="#c8a000"
+     id="text106"
+     style="fill:#1a1a1a;fill-opacity:1;stroke:url(#linearGradient18);stroke-width:1.09302"
+     transform="scale(0.98720981,1.0129559)">• Ímã a 1–3 mm do sensor · sem pull-up externo necessário</text>
+  <text
+     x="442.61121"
+     y="722.9447"
+     font-size="9.83716px"
+     fill="#c8a000"
+     id="text107"
+     style="fill:#1a1a1a;fill-opacity:1;stroke:url(#linearGradient20);stroke-width:1.09302"
+     transform="scale(0.98720981,1.0129559)">• HX711: alimente com 5V para melhor SNR · GND comum obrigatório</text>
+  <text
+     x="442.61121"
+     y="740.43298"
+     font-size="9.83716px"
+     fill="#c8a000"
+     id="text108"
+     style="fill:#1a1a1a;fill-opacity:1;stroke:url(#linearGradient22);stroke-width:1.09302"
+     transform="scale(0.98720981,1.0129559)">• Freio invertido? Marque invb na GUI ou troque A+ por A−</text>
+  <text
+     x="442.61121"
+     y="757.92126"
+     font-size="9.83716px"
+     fill="#c8a000"
+     id="text109"
+     style="fill:#1a1a1a;fill-opacity:1;stroke:url(#linearGradient24);stroke-width:1.09302"
+     transform="scale(0.98720981,1.0129559)">• Recalibre com Auto-Cal após montar (range varia com o ímã)</text>
+  <line
+     x1="40"
+     y1="800"
+     x2="1160"
+     y2="800"
+     stroke="#21262d"
+     stroke-width="1"
+     id="line109" />
+  <text
+     x="600"
+     y="826"
+     font-size="9px"
+     fill="#30363d"
+     text-anchor="middle"
+     id="text110">SIM Pedals Blue Pill v1.0.0 · DrEaD SimGear · MIT License · github.com/Jean-DrEaD/sim-pedals-bluepill</text>
+</svg>

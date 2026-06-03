@@ -1,0 +1,2 @@
+USBComposite,https://github.com/arpruss/USBComposite_stm32f1
+HX711,https://github.com/bogde/HX711
